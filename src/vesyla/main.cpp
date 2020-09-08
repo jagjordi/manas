@@ -84,7 +84,7 @@ int main(int argc, char* argv[]){
 	ir0.dump();
 	
 	boost::filesystem::path p(file_list[0]);
-	string design = p.stem();
+	string design = p.stem().string();
 	boost::filesystem::path full_path_fabric(path_fabric);
 	if(!full_path_fabric.has_root_directory()){
 		full_path_fabric = boost::filesystem::current_path() / full_path_fabric;
